@@ -35,6 +35,8 @@
             lbUsuario = new Label();
             errorUsuario = new ErrorProvider(components);
             listView1 = new ListView();
+            timer1 = new System.Windows.Forms.Timer(components);
+            lbTimer = new Label();
             ((System.ComponentModel.ISupportInitialize)errorUsuario).BeginInit();
             SuspendLayout();
             // 
@@ -90,19 +92,35 @@
             listView1.MouseEnter += listView1_MouseEnter;
             listView1.MouseLeave += listView1_MouseLeave;
             // 
+            // timer1
+            // 
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+            // 
+            // lbTimer
+            // 
+            lbTimer.AutoSize = true;
+            lbTimer.Location = new Point(119, 188);
+            lbTimer.Name = "lbTimer";
+            lbTimer.Size = new Size(50, 20);
+            lbTimer.TabIndex = 5;
+            lbTimer.Text = "label2";
+            lbTimer.Visible = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(525, 296);
+            Controls.Add(lbTimer);
             Controls.Add(listView1);
             Controls.Add(lbUsuario);
             Controls.Add(btnValidar);
             Controls.Add(label1);
             Controls.Add(txtNombre);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Componentes Windows Forms";
             ((System.ComponentModel.ISupportInitialize)errorUsuario).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -116,5 +134,7 @@
         private Label lbUsuario;
         private ErrorProvider errorUsuario;
         private ListView listView1;
+        private System.Windows.Forms.Timer timer1;
+        private Label lbTimer;
     }
 }
