@@ -19,7 +19,7 @@ namespace WinFormsApp3
             else
             {
                 lbUsuario.Text = txtNombre.Text;
-                lbUsuario.Font = new Font(lbUsuario.Font, FontStyle.Bold);
+                lbUsuario.Font = new Font("Arial", 10, FontStyle.Bold);
                 lbUsuario.Visible = true;
                 listView1.Items.Add(txtNombre.Text);
                 //Activamos el timer para que se muestre el reloj y se oculte a los 10 segundos
@@ -40,7 +40,7 @@ namespace WinFormsApp3
         private void timer1_Tick(object sender, EventArgs e)
         {
             seconds++;
-            lbTimer.Text = DateTime.Now.ToString("hh:mm:ss");
+            lbTimer.Text = DateTime.Now.ToString("HH:mm:ss");
             lbTimer.Visible = true;
 
             if (seconds == 5)
